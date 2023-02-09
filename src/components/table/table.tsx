@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { TableRows } from '@components/table-rows';
 import { TableHeader } from '@components/table-header';
@@ -32,6 +32,10 @@ export const Table = ({
     const sortedItems = sortItems(rows, item);
     setSortedRows([...sortedItems]);
   };
+
+  useEffect(() => {
+    setSortedRows(undefined); // Необходимо для сброса сортировки после получения новых данных в rows
+  }, [rows]);
 
   const Content = () => {
     if (isLoading) {

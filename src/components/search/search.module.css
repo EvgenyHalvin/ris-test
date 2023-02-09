@@ -1,3 +1,14 @@
+@keyframes selectItemsAppearing {
+  0% {
+    opacity: 0;
+    box-shadow: -1px 10px 9px -1px rgb(230, 230, 230, 0);
+  }
+  100% {
+    opacity: 1;
+    box-shadow: -1px 10px 9px -1px var(--primary-color);
+  }
+}
+
 .wrap {
   border-radius: 8px;
   border: 1px var(--primary-color-light) solid;
@@ -76,6 +87,9 @@
   border-radius: 8px;
   overflow: hidden;
   box-shadow: -1px 10px 9px -1px var(--primary-color);
+  z-index: 10;
+
+  animation: selectItemsAppearing ease-in-out 0.15s;
 }
 
 .prompt {
