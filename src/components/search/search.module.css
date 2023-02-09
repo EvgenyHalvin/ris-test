@@ -1,0 +1,120 @@
+.wrap {
+  border-radius: 8px;
+  border: 1px var(--primary-color-light) solid;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  gap: 12px;
+  width: 100%;
+  transition: 0.15s all;
+}
+
+.wrap:hover {
+  border-color: var(--primary-blue-hover);
+}
+
+.wrapDisabled:hover {
+  border-color: var(--primary-color-light);
+}
+
+.input {
+  height: 22px;
+  font-size: 16px;
+  outline: none;
+  width: 100%;
+  border: none;
+  font-family: Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+.input::placeholder {
+  font-family: Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+.input:disabled {
+  background-color: #fff;
+}
+.input:disabled::placeholder {
+  color: var(--primary-color);
+}
+
+.searchButton {
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  padding: 0 16px;
+  font-size: 16px;
+  color: #fff;
+  background-color: var(--primary-blue-hover);
+  transition: 0.15s all;
+}
+
+.searchButton:hover {
+  cursor: pointer;
+  background-color: var(--primary-blue);
+}
+
+.searchButton:active {
+  background-color: var(--primary-blue-light);
+}
+
+.searchButton:disabled {
+  cursor: default;
+  background-color: var(--primary-color-light);
+}
+
+.inputArea {
+  position: relative;
+  width: 100%;
+}
+
+.prompts {
+  position: absolute;
+  top: 37px;
+  left: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: -1px 10px 9px -1px var(--primary-color);
+}
+
+.prompt {
+  height: 20px;
+  padding: 8px 16px;
+  background-color: #fff;
+  transition: 0.1s;
+  white-space: nowrap;
+}
+
+.prompt:hover {
+  background-color: var(--primary-color-light);
+}
+
+.promptSelected {
+  background-color: var(--primary-color-light);
+}
+
+.resetButton {
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  padding: 0 16px;
+  font-size: 16px;
+  color: #fff;
+  background-color: var(--primary-blue-hover);
+  transition: 0.15s all;
+}
+
+.resetButton:hover {
+  cursor: pointer;
+  background-color: var(--primary-blue);
+}
+
+.resetButton:active {
+  background-color: var(--primary-blue-light);
+}
+
+.resetButton:disabled {
+  cursor: default;
+  background-color: var(--primary-color-light);
+}

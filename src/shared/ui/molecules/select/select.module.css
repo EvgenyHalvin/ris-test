@@ -1,0 +1,55 @@
+@keyframes selectItemsAppearing {
+  0% {
+    opacity: 0;
+    box-shadow: -1px 10px 9px -1px rgb(230, 230, 230, 0);
+  }
+  100% {
+    opacity: 1;
+    box-shadow: -1px 10px 9px -1px var(--primary-color);
+  }
+}
+
+.wrap {
+  height: 20px;
+  border: 1px var(--primary-color) solid;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.1s;
+  min-width: 150px;
+  user-select: none;
+  position: relative;
+  transition: all 0.15s;
+}
+
+.wrap:hover {
+  border-color: var(--primary-blue);
+  cursor: pointer;
+}
+
+.wrapLabel {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.wrapDisabled {
+  border-color: var(--primary-color-light);
+  color: var(--primary-color);
+}
+
+.wrapDisabled:hover {
+  border-color: var(--primary-color-light);
+  cursor: default;
+}
+
+.selectItems {
+  position: absolute;
+  min-width: 150px;
+  top: 37px;
+  left: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: -1px 10px 9px -1px var(--primary-color);
+
+  animation: selectItemsAppearing ease-in-out 0.15s;
+}

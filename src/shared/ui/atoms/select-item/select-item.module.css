@@ -1,0 +1,11 @@
+.wrap {
+  height: 20px;
+  min-width: 148px;
+  padding: 8px 16px;
+  background-color: #fff;
+  transition: 0.1s;
+}
+
+.wrap:hover {
+  background-color: var(--primary-color-light);
+}
